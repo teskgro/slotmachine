@@ -1,0 +1,36 @@
+* {
+    cursor: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: white;
+}
+
+.cursor {
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    z-index: -100;
+}
+
+.image {
+    display: none;
+    pointer-events: none;
+    height: auto;
+    width: 100%;
+}
+
+/* Hide the GIF on touchscreen devices */
+@media (hover: none) and (pointer: coarse) {
+    .image {
+        display: block;
+    }
+    .cursor {
+        display: none;
+    }
+}
